@@ -33,6 +33,7 @@ class CoinListFragment : Fragment() {
         binding.coinList.adapter = adapter
 
         viewModel.coins.observe(viewLifecycleOwner, Observer {
+
             it?.let{
                 adapter.submitList(it)
             }
